@@ -25,7 +25,7 @@
   <% end %>
 
   <% @navlinks.each do |link| %>
-    <a href="#<%= link.downcase %>" class="<%= @navlinkClasses %>"><%= link %></a>
+    <a href="#<%= link.downcase %>" class="<%= @navlinkClasses %> hover:scale-110 transition duration-500"><%= link %></a>
   <% end %>
   <p id="hamburger" class="md:hidden absolute text-2xl top-5 text-white"><i class="fas fa-bars"></i></p>
 
@@ -81,11 +81,12 @@
   <div id="carousel" class="w-full overflow-hidden mt-0 grid md:grid-cols-2 lg:grid-cols-3 grid-rows-2 mx-auto" style="max-width: 1500px;">
     <% @projects.each_with_index do |project, index| %>
       <div id="project<%= index %>" class="rounded relative my-14 border-2 border-gray-100 mx-1 md:mx-3 p-2 transform duration-300 hover:scale-105 active:scale-105 hover:shadow-xl">
-        <div id="feature<%= index %>" class="md:absolute flex flex-wrap md:w-60 z-50 p-5 <%= index % 3 == 0 ? "md:-right-60" : 'md:-left-60' %> tranform transition duration-300 hidden top-2 rounded md:border border-r-4 border-gray-200 shadow-xl" style="background-color: rgba(240,240,240,0.8)">
+        <%# Hidden feature part %>
+        <div id="feature<%= index %>" class="md:absolute flex flex-wrap md:w-60 m-10 md:m-0 z-50 p-5 <%= index % 3 == 0 ? "md:-top-60" : 'md:-left-60' %> tranform transition duration-300 hidden top-2 rounded md:border border-r-4 border-gray-200 shadow-xl" style="background-color: rgba(240,240,240,0.8)">
           <h1 class="w-full">Included Features</h1>
           <% languages = project[:languages].gsub(/\W/, ' ').split(" ") %>
           <% languages.each_with_index do |language, index| %>
-            <p class="<%= @projectClasses %>">
+            <p class="<%= @projectClasses %> bg-black">
               <% if language == "Slick" || language == "Styled" %>
                 <%= language + " " + languages[index + 1] %>
               <% else %>
@@ -162,7 +163,7 @@
   </div>
   <div class="flex">
     <div class="rounded-full border border-blue-400 w-14 text-2xl flex justify-center items-center h-14 flex justify-center items-center" ><i class="fas fa-envelope"></i></div>
-    <a href="mailto:marcus.thorne475@gmail.com" class="my-auto ml-5 text-blue-400 underline">marcus.thorne475@gmail.com</a>
+    <a href="mailto:marcus.thorne475@gmail.com" class="my-auto ml-5 text-blue-400 underline">marcusthorne096@gmail.com</a>
   </div>
   <div class="flex">
     <div class="rounded-full border border-blue-400 w-14 text-2xl flex justify-center items-center h-14 flex justify-center items-center" ><i class="fas fa-map-marker-alt"></i></div>
