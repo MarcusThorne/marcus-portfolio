@@ -23,13 +23,13 @@ Project.create([
     languages: ["HTML", "React", "Styled Components", "JavaScript", "SCSS", "PostgreSQL", "Slick Carousel", "Parallax"]
   },
   {
-    title: 'CityWide Construction',
+    title: 'Mark Thorne Groundworks',
     image: 'CityWide Construction.png',
-    description: 'CityWide Construction is a one-page HTML webpage that shows users information about a construction company.
+    description: 'Mark Thorne Groundworks is a one-page HTML, CSS and JavaScript webpage that shows users information about a construction company.
     Allows users to see contact information and Location.',
-    githubLink: 'https://github.com/MarcusThorne/citywide-construction',
+    githubLink: 'https://github.com/MarcusThorne/mark-thorne-gw',
     onGithub: true,
-    websiteLink: 'https://modest-lamarr-215700.netlify.app/',
+    websiteLink: 'https://mark-thorne-gw.netlify.app/',
     languages: ["HTML", "JavaScript", "SCSS"]
   },
   {
