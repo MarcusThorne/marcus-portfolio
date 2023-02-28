@@ -111,8 +111,8 @@
 </div>
 
 <%# Experience and Education %>
-<div class="bg-gray-100 pt-10 pb-20 mt-20 md:mt-32">
-    <div class="mx-auto" style="max-width: 1800px;">
+<div class="pt-10 pb-20 mt-20 md:mt-32" style="background-color: rgba(10,10,10,1)">
+    <div class="mx-auto text-white" style="max-width: 1800px;">
         <% 2.times do %>
             <h1 class="text-center text-4xl my-16 text-blue-400"><%= @title %></h1>
 
@@ -124,14 +124,14 @@
                 <div class="border-l-2 border-blue-400 relative w-full">
                     <p class="absolute -top-8 -left-5 border border-blue-400 rounded-full bg-white w-10 h-10 flex justify-center items-center"><i class="<%= @title == "Experience" ? "fas fa-briefcase" : "fas fa-user-graduate" %>"></i></p>
 
-                    <div class="opacity-80 px-5 sm:px-10 py-5 rounded ml-10 md:ml-20 lg:ml-40 transform transition duration-300 hover:shadow-xl hover:scale-100" style="background-color: rgba(190,190,190,0.1)" >
+                    <div class="opacity-80 px-5 sm:px-10 py-5 rounded ml-10 md:ml-20 lg:ml-40 transform transition duration-300 hover:shadow-xl hover:scale-100" style="background-color: rgba(190,190,190,0.02)" >
                     <h1 class="text-xl"><%= w[:job] %></h1>
                     <h1 class="text-lg mb-5 text-blue-400"><%= w[:title] %></h1>
                     <% w[:description].split("$").each do |bulletPoint| %>
                         <% if bulletPoint.include?("Successful in the following modules") %>
                         <p class="text-xs sm:text-base mt-5 mb-2"><%= bulletPoint %></p>
                         <%  elsif bulletPoint.length >= 1 %>
-                        <div class="ml-5 flex items-center text-gray-700">
+                        <div class="ml-5 flex items-center text-white">
                             <i class="fas fa-circle mr-5 text-gray-300" style="font-size: 6px;"></i><p class="text-xs sm:text-base"><%= bulletPoint %></p>
                         </div>
                         <% end %>
